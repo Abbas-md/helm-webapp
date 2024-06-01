@@ -1,0 +1,5 @@
+appName: backend-app
+namespace: default
+servicePort: 5039
+targetPort: 80
+feNodePort: 30449

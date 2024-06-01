@@ -1,0 +1,5 @@
+appName: frontend-app
+namespace: default
+servicePort: 3000
+targetPort: 80
+feNodePort: 32630
