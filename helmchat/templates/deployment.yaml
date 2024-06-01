@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+  namespace: default
+  labels:
+    app: mywebapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mywebapp
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: mywebapp
+        tier: frontend
+    spec: # Pod spec
+      containers:
+      - name: mycontainer
+        image: abbas06/frontend:latest
+        env:
+        - name: PORT
+          value: "80"
+        - name: REACT_APP_API_URL
+          value: "http://52.88.197.56:30449"
