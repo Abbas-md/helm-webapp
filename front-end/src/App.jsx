@@ -7,7 +7,7 @@ function App() {
 
     const fetchPaymentsData = async () => {
         try {
-            const response = await fetch("http://52.88.197.56:30449/api/payments", {
+            const response = await fetch("http://34.218.248.98:30449/api/payments", {
                 headers: {
                     Accept: "application/json",
                 },
@@ -26,7 +26,7 @@ function App() {
     const fetchVersioningData = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5181/api/versioning", 
+                "http://34.218.248.98:30449/api/versioning", 
                 {
                     headers: {
                         Accept: "application/json",
@@ -91,12 +91,13 @@ function App() {
                         >
                             {versioningValue !== null ? (
                                 <>
+                                           
                                     <span>
-                                        Successfully connected to API:{" "}
-                                        {versioningValue.value}
+                                        Successfully connected to API{" "}
+                                        {versioningValue.version}
                                     </span>
-                                    <br />
-                                    <span>{versioningValue.responseDate}</span>
+                                    
+                               
                                 </>
                             ) : (
                                 "Failed to connect to API"
